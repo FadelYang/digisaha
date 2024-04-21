@@ -9,7 +9,18 @@
             image="{{ asset('images/fachrizal-maulana-vaVdrH0hBg4-unsplash.jpg') }}"
             imageAlt="Digisaha, memudahkan proses digitalisasi usaha anda"
             :isImageRightSide="true"
+            :isTitlePriorityDisplay="true"
             >
         </x-main-component>
+        <x-section-title title="Tentang Kami" subtitle="Digisaha, bantu digitalkan usaha anda"></x-section-title>
+        <x-main-component
+            title="Hadir membantu meningkatkan usaha anda"
+            subtitle="Digisaha memiliki visi untuk membantu pengusaha untuk meningkatkan usaha mereka, melalui Digitalisasi usaha, kami berharap pengusaha dapat memperluas jangkauan usaha dan meningkatkan pendapatan."
+            buttonText="Lihat Produk Kami"
+            image="{{ asset('images/fachrizal-maulana-vaVdrH0hBg4-unsplash.jpg') }}"
+            imageAlt="Digisaha, memudahkan proses digitalisasi usaha anda"
+            :isImageRightSide="false"
+            :isTitlePriorityDisplay="false"
+        ></x-main-component>
     </div>
 @endsection
