@@ -15,10 +15,10 @@ class navLink extends Component
     /**
      * Create a new component instance.
      * 
-     *  @param string $href
-     *  @param string $navName
-     *  @param bool $isActive
-     *  @return void
+     * @param string $href
+     * @param string $navName
+     * @param bool $isActive
+     * @return void
      */
     public function __construct($href, $navName, $isActive)
     {
