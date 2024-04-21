@@ -8,7 +8,7 @@
     'isTitlePriorityDisplay' => 'false',
 ])
 
-<div class="block d-flex flex-column-reverse {{ $isImageRightSide ? 'flex-lg-row' : 'flex-lg-row-reverse' }}">
+<div class="block d-flex flex-column-reverse my-3 {{ $isImageRightSide ? 'flex-lg-row' : 'flex-lg-row-reverse' }}">
     <div
         class="col-12 col-lg-6 d-flex flex-column justify-content-center mt-3 mt-lg-0 text-center text-lg-start align-items-center align-items-lg-start {{ $isImageRightSide ? '' : 'ps-0 ps-xl-5' }}">
             <h1

@@ -23,5 +23,23 @@
             :isTitlePriorityDisplay="false"
         ></x-main-component>
         <x-section-title title="Produk dan Layanan Kami" subtitle="Landing page dan sistem manajemen usahana, bantu operasional perusahaan anda"></x-section-title>
+        <x-main-component
+            title="Landing Page"
+            subtitle="Halaman wesbite yang dapat menampilkan profile perusahaan kamu, tampilkan profil usaha dan produk kamu agar dapat dikenal oleh lebih banyak orang di Internet. perluas pasar dengan digitalisasi usaha kamu."
+            buttonText="Lihat Produk Landing Page"
+            image="{{ asset('images/fachrizal-maulana-vaVdrH0hBg4-unsplash.jpg') }}"
+            imageAlt="Digisaha, memudahkan proses digitalisasi usaha anda"
+            :isImageRightSide="false"
+            :isTitlePriorityDisplay="false"
+        ></x-main-component>
+        <x-main-component
+            title="Sistem Manajemen Usaha"
+            subtitle="Halaman wesbite yang dapat menampilkan profile perusahaan kamu, tampilkan profil usaha dan produk kamu agar dapat dikenal oleh lebih banyak orang di Internet. perluas pasar dengan digitalisasi usaha kamu."
+            buttonText="Lihat Produk Kami"
+            image="{{ asset('images/fachrizal-maulana-vaVdrH0hBg4-unsplash.jpg') }}"
+            imageAlt="Digisaha, memudahkan proses digitalisasi usaha anda"
+            :isImageRightSide="false"
+            :isTitlePriorityDisplay="false"
+        ></x-main-component>
     </div>
 @endsection
