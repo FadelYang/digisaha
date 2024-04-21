@@ -41,5 +41,11 @@
             :isImageRightSide="false"
             :isTitlePriorityDisplay="false"
         ></x-main-component>
+        <div class="py-5 bg-dark text-white rounded-1">
+            <x-section-title title="Hubungi kami" subtitle="Hubungi kami untuk konsultasi lebih lanjut"></x-section-title>
+            <div class="text-center">
+                <button class="btn btn-primary">Hubungi kami</button>
+            </div>
+        </div>
     </div>
 @endsection
