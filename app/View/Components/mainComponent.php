@@ -14,6 +14,7 @@ class mainComponent extends Component
     public $image;
     public $imageAlt;
     public $isImageRightSide;
+    public $isTitlePriorityDisplay;
 
     /**
      * Create a new component instance.
@@ -23,8 +24,9 @@ class mainComponent extends Component
      * @param string $buttonText
      * @param string $image
      * @param bool $isImageRightSide
+     * @param bool $isTitlePriorityDisplay
      */
-    public function __construct($title, $subtitle, $buttonText, $image, $imageAlt, $isImageRightSide)
+    public function __construct($title, $subtitle, $buttonText, $image, $imageAlt, $isImageRightSide, $isTitlePriorityDisplay)
     {
         $this->title = $title;
         $this->subtitle = $subtitle;
@@ -32,6 +34,7 @@ class mainComponent extends Component
         $this->image = $image;
         $this->imageAlt = $imageAlt;
         $this->isImageRightSide = $isImageRightSide;
+        $this->isTitlePriorityDisplay = $isTitlePriorityDisplay;
     }
 
     /**

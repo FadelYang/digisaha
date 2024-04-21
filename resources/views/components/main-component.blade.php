@@ -1,11 +1,19 @@
-@props(['title', 'subtitle', 'buttonText', 'image', 'isImageRightSide' => 'false', 'imageAlt'])
+@props([
+    'title',
+    'subtitle',
+    'buttonText',
+    'image',
+    'isImageRightSide' => 'false',
+    'imageAlt',
+    'isTitlePriorityDisplay' => 'false',
+])
 
 <div class="block d-flex flex-column-reverse {{ $isImageRightSide ? 'flex-lg-row' : 'flex-lg-row-reverse' }}">
     <div
         class="col-12 col-lg-6 d-flex flex-column justify-content-center mt-3 mt-lg-0 text-center text-lg-start align-items-center align-items-lg-start">
-        <div class="{{ $isImageRightSide ? '' : 'ms-5' }}">
-            <h1 class="fw-bold {{ $isImageRightSide ? 'w-75' : 'w-100' }} display-3">{{ $title }}</h1>
-            <h2 class="fw-light fs-4 w-75">
+        <div class="{{ $isImageRightSide ? 'flex' : 'ms-5' }}">
+            <h1 class="fw-bold {{ $isImageRightSide ? 'w-75' : 'w-100' }} {{ $isTitlePriorityDisplay ? 'display-3' : 'display-5' }}">{{ $title }}</h1>
+            <h2 class="fw-light fs-4 {{ $isImageRightSide ? 'w-75' : 'w-100' }}">
                 {{ $subtitle }}
             </h2>
             <div class="d-flex gap-3 mt-3">
