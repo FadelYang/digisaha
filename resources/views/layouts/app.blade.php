@@ -34,10 +34,13 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('welcome') }}">{{ __('Home') }}</a>
-                        </li>
+                    <ul class="navbar-nav ms-auto gap-3">
+                        @php
+                            $currentRoute = Route::currentRouteName();   
+                        @endphp
+                        <x-nav-link href="{{ route('welcome') }}" :isActive="$currentRoute == 'welcome'" navName="Home"></x-nav-link>
+                        <x-nav-link href="#" navName="Produk dan Layanan"></x-nav-link>
+                        <x-nav-link href="#" navName="Tentang Kami"></x-nav-link>
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
