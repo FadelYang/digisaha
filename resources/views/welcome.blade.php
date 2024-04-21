@@ -22,5 +22,6 @@
             :isImageRightSide="false"
             :isTitlePriorityDisplay="false"
         ></x-main-component>
+        <x-section-title title="Produk dan Layanan Kami" subtitle="Landing page dan sistem manajemen usahana, bantu operasional perusahaan anda"></x-section-title>
     </div>
 @endsection
