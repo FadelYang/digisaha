@@ -34,21 +34,24 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('welcome') }}">{{ __('Home') }}</a>
-                        </li>
+                    <ul class="navbar-nav ms-auto gap-3">
+                        @php
+                            $currentRoute = Route::currentRouteName();   
+                        @endphp
+                        <x-nav-link href="{{ route('welcome') }}" :isActive="$currentRoute == 'welcome'" navName="Home"></x-nav-link>
+                        <x-nav-link href="#" navName="Produk dan Layanan"></x-nav-link>
+                        <x-nav-link href="#" navName="Tentang Kami"></x-nav-link>
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link {{ $currentRoute == 'login' ? 'active fw-bold' : '' }}" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link {{ $currentRoute == 'register' ? 'active fw-bold' : '' }}" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -58,6 +61,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Profile</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
