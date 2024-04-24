@@ -35,7 +35,7 @@
         <x-main-component
             title="Sistem Manajemen Usaha"
             subtitle="Halaman wesbite yang dapat menampilkan profile perusahaan kamu, tampilkan profil usaha dan produk kamu agar dapat dikenal oleh lebih banyak orang di Internet. perluas pasar dengan digitalisasi usaha kamu."
-            buttonText="Lihat Produk Kami"
+            buttonText="Lihat Produk Manajemen Usaha"
             image="{{ asset('images/fachrizal-maulana-vaVdrH0hBg4-unsplash.jpg') }}"
             imageAlt="Digisaha, memudahkan proses digitalisasi usaha anda"
             :isImageRightSide="false"

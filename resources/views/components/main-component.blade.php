@@ -6,6 +6,7 @@
     'isImageRightSide' => 'false',
     'imageAlt',
     'isTitlePriorityDisplay' => 'false',
+    'buttonLink' => '#',
 ])
 
 <div class="block d-flex flex-column-reverse my-3 {{ $isImageRightSide ? 'flex-lg-row' : 'flex-lg-row-reverse' }}">
@@ -18,7 +19,7 @@
                 {{ $subtitle }}
             </h2>
             <div class="d-flex gap-3 mt-3">
-                <a href="#" class="btn btn-primary">{{ $buttonText }}</a>
+                <a href="{{ $buttonLink }}" target="_blank" class="btn btn-primary">{{ $buttonText }}</a>
             </div>
 
     </div>
