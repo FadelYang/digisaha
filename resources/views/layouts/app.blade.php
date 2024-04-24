@@ -37,7 +37,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse fs-5" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
 
@@ -49,7 +49,7 @@
                             $currentRoute = Route::currentRouteName();
                         @endphp
                         <x-nav-link href="{{ route('welcome') }}" :isActive="$currentRoute == 'welcome'" navName="Home"></x-nav-link>
-                        <x-nav-link href="#" navName="Produk dan Layanan"></x-nav-link>
+                        <x-nav-link href="{{ route('product-and-service') }}" :isActive="$currentRoute == 'product-and-service'" navName="Produk dan Layanan"></x-nav-link>
                         <x-nav-link href="#" navName="Tentang Kami"></x-nav-link>
                         <!-- Authentication Links -->
                         @guest

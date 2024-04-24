@@ -9,7 +9,7 @@
                     'link' => 'https://fadelyang.github.io/simple-look-umkm/',
                 ],
                 'button2' =>[
-                    'text' => 'Beli Sekarang',
+                    'text' => 'Pesan Sekarang',
                     'link' => '#',
                 ]
             ],
@@ -19,7 +19,7 @@
                     'link' => '#',
                 ],
                 'button2' =>[
-                    'text' => 'Beli Sekarang',
+                    'text' => 'Pesan Sekarang',
                     'link' => '#',
                 ]
             ],
