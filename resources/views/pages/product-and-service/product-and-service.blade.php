@@ -10,7 +10,7 @@
                 ],
                 'button2' =>[
                     'text' => 'Pesan Sekarang',
-                    'link' => '#',
+                    'link' => route('product-and-service.register-page'),
                 ]
             ],
             'content2' => [
