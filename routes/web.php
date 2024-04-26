@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
+use App\Http\Controllers\ProductAndServiceController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -13,9 +14,12 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware(["auth", "verified"]);
 
-Route::get('/product-and-service', [App\Http\Controllers\ProductAndServiceController::class, 'index'])->name('product-and-service');
+// product and service form
+Route::get('/product-and-service', [ProductAndServiceController::class, 'index'])->name('product-and-service');
 
-Route::get('/product-and-service/register', [App\Http\Controllers\ProductAndServiceController::class, 'getRegisterPage'])->name('product-and-service.register-page')->middleware('auth');
+Route::get('/product-and-service/register', [ProductAndServiceController::class, 'getRegisterPage'])->name('product-and-service.register-page')->middleware('auth');
+
+Route::post('/product-and-service/create=registration', [ProductAndServiceController::class, 'createRegistration'])->name('product-and-service.create-registration')->middleware('auth');
 
 Route::get('/email/verify', function () {
     return view('auth.verify');

@@ -6,7 +6,7 @@
         <section>
             <p>Mohon baca <a href="#">ketentuan dan syarat</a> sebelum mengisi form ini</p>
 
-            <form action="#" class="row" method="POST">
+            <form action="{{ route('product-and-service.create-registration') }}" class="row" method="POST">
                @csrf
                 <x-form-input
                     classAttribute="col-md-6"

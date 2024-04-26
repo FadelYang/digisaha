@@ -15,4 +15,9 @@ class ProductAndServiceController extends Controller
     {
         return view('pages.product-and-service.register-page');
     }
+
+    public function createRegistration(Request $request)
+    {
+        dd($request);
+    }
 }
