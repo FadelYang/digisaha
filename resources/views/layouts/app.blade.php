@@ -49,7 +49,7 @@
                             $currentRoute = Route::currentRouteName();
                         @endphp
                         <x-nav-link href="{{ route('welcome') }}" :isActive="$currentRoute == 'welcome'" navName="Home"></x-nav-link>
-                        <x-nav-link href="{{ route('product-and-service') }}" :isActive="$currentRoute == 'product-and-service'" navName="Produk dan Layanan"></x-nav-link>
+                        <x-nav-link href="{{ route('product-and-service') }}" :isActive="$currentRoute == 'product-and-service' || $currentRoute == 'product-and-service.register-page'" navName="Produk dan Layanan"></x-nav-link>
                         <x-nav-link href="#" navName="Tentang Kami"></x-nav-link>
                         <!-- Authentication Links -->
                         @guest
