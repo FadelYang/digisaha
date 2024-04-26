@@ -19,7 +19,7 @@ Route::get('/product-and-service', [ProductAndServiceController::class, 'index']
 
 Route::get('/product-and-service/register', [ProductAndServiceController::class, 'getRegisterPage'])->name('product-and-service.register-page')->middleware('auth');
 
-Route::post('/product-and-service/create=registration', [ProductAndServiceController::class, 'createRegistration'])->name('product-and-service.create-registration')->middleware('auth');
+Route::post('/product-and-service/create-registration', [ProductAndServiceController::class, 'createRegistration'])->name('product-and-service.create-registration')->middleware('auth');
 
 Route::get('/email/verify', function () {
     return view('auth.verify');
