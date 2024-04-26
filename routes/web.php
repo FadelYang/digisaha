@@ -13,7 +13,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware(["auth", "verified"]);
 
-Route::get('/produk-dan-layanan', [App\Http\Controllers\ProductAndServiceController::class, 'index'])->name('product-and-service');
+Route::get('/product-and-service', [App\Http\Controllers\ProductAndServiceController::class, 'index'])->name('product-and-service');
+
+Route::get('/product-and-service/register', [App\Http\Controllers\ProductAndServiceController::class, 'getRegisterPage'])->name('product-and-service.register-page')->middleware('auth');
 
 Route::get('/email/verify', function () {
     return view('auth.verify');
