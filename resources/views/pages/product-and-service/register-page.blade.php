@@ -6,7 +6,8 @@
         <section>
             <p>Mohon baca <a href="#">ketentuan dan syarat</a> sebelum mengisi form ini</p>
 
-            <form action="#" class="row">
+            <form action="#" class="row" method="POST">
+               @csrf
                 <x-form-input
                     classAttribute="col-md-6"
                     inputName="company_owner"
@@ -93,7 +94,7 @@
                           Saya sudah membaca <a href="#">Syarat dan ketentuan</a>
                         </label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Isi Formulir</button>
+                    <button type="submit" class="btn btn-primary" onclick="confirm('Apakah anda ingin mengisi formulir? pastikan data yang anda input benar')">Isi Formulir</button>
                 </div>
             </form>
         </section>
