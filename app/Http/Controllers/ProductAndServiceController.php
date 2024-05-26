@@ -31,7 +31,7 @@ class ProductAndServiceController extends Controller
         $data = $request->validated();
 
         $result = $this->productAndServiceInterface->createRegistration($data);
-        // dd($result);
+
         return redirect()->route($result['redirectTo'])->with([
             'alert-type' => $result['status'],
             'message' => $result['message']
