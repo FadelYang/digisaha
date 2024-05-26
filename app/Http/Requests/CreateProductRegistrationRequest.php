@@ -42,6 +42,7 @@ class CreateProductRegistrationRequest extends FormRequest
 public function messages(): array
 {
     return [
+        'company_owner.max' => 'Pastikan menginput nama dengan benar (maximal 50 karakter)',
         'company_owner.required' => 'Nama pemilik usaha wajib diisi',
         'company_name.required' => 'Nama perusahaan wajib diisi',
         'company_email.required' => 'Email perusahaan wajib diisi (gunakan email pemilik usaha jika tidak ada)',
