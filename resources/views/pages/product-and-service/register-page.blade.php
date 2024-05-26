@@ -3,9 +3,10 @@
 @section('content')
     <div class="container">
         <x-header-breadcrumb pageTitle="Register To A Product"></x-header-breadcrumb>
+        
         <section>
             <p>Mohon baca <a href="#">ketentuan dan syarat</a> sebelum mengisi form ini</p>
-
+            <x-alert message="{{ session('message') }}" alertType="{{  session('alert-type') }}"></x-alert>
             <form action="{{ route('product-and-service.create-registration') }}" class="row" method="POST"  enctype="multipart/form-data">
                @csrf
                 <x-form-input
@@ -75,7 +76,7 @@
                 ></x-form-input>
                 <x-form-input
                     classAttribute="col-md-3"
-                    inputName="number_of_employees"
+                    inputName="num_of_employees"
                     inputType="number"
                     inputText="Jumlah karyawan"
                     placeholder="contoh: 50 (masukkan dalam angka)"

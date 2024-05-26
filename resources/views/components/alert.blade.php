@@ -1,5 +1,7 @@
-@if (session("message"))
-    <div class="alert alert-info">
-        {{ session('message') }}
+@props(['message', 'alertType'])
+
+@if ($message)
+    <div class="alert alert-{{ $alertType }}">
+        {{ $message }}
     </div>
 @endif

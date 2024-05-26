@@ -29,7 +29,7 @@ class CreateProductRegistrationRequest extends FormRequest
             'company_address' => 'required|min:10',
             'company_business_sector' => 'required',
             'company_business_sector_detail' => 'required|max:50',
-            'number_of_employees' => 'required',
+            'num_of_employees' => 'required',
             'monthly_income' => 'required',
         ];
     }
@@ -52,7 +52,7 @@ public function messages(): array
         'company_address.min' => 'Pastikan yang diisi adalah alamat lengkap',
         'company_business_sector.required' => 'Jenis usaha wajib diisi',
         'company_business_sector_detail.required' => 'Detail jenis usaha wajib diisi',
-        'number_of_employees.required' => 'Jumlah karyawan wajib diisi',
+        'num_of_employees.required' => 'Jumlah karyawan wajib diisi',
         'monthly_income.required' => 'Pendapatan bulanan perusahaan wajib diisi',
     ];
 }
