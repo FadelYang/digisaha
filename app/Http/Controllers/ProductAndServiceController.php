@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateProductRegistrationRequest;
 use App\Interfaces\ProductAndServiceInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductAndServiceController extends Controller
 {
@@ -27,8 +28,13 @@ class ProductAndServiceController extends Controller
 
     public function createRegistration(CreateProductRegistrationRequest $request)
     {
-        dd($request->validated());
-        
         $data = $request->validated();
+
+        $result = $this->productAndServiceInterface->createRegistration($data);
+        // dd($result);
+        return redirect()->route($result['redirectTo'])->with([
+            'alert-type' => $result['status'],
+            'message' => $result['message']
+        ]);
     }
 }
