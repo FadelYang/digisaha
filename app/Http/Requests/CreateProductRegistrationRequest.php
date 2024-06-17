@@ -22,6 +22,7 @@ class CreateProductRegistrationRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'product_category' => 'required',
             'company_owner' => 'required|max:50',
             'company_name' => 'required|max:50',
             'company_email' => 'required|max:50|email',

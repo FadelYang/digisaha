@@ -15,7 +15,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])
     ->name('home')
-    ->middleware(["auth", "verified"]);
+    ->middleware(["auth"]);
 
 // product and service form
 Route::get('/product-and-service', [ProductAndServiceController::class, 'index'])

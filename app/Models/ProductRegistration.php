@@ -13,6 +13,7 @@ class ProductRegistration extends Model
 
     protected $fillable = [
         'registrant_id',
+        'product_category',
         'company_owner',
         'company_name',
         'company_email',

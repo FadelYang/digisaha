@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->bigInteger('registrant_id');
+            $table->string('product_category');
             $table->string('company_owner');
             $table->string('company_name');
             $table->string('company_email');
