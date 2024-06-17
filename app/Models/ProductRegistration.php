@@ -21,6 +21,11 @@ class ProductRegistration extends Model
         'company_business_sector_detail',
         'num_of_employees',
         'monthly_income',
+        'status',
+    ];
+
+    protected $attributes = [
+        'status' => false
     ];
 
     protected static function booted()

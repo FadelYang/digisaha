@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('company_business_sector_detail');
             $table->integer('num_of_employees');
             $table->text('monthly_income');
+            $table->boolean('status');
 
             $table->foreign('registrant_id')->references('id')->on('users');
 
