@@ -67,6 +67,7 @@ class ProductRegistrationDataTable extends DataTable
             Column::make('company_email'),
             Column::make('company_name'),
             Column::make('company_business_sector'),
+            Column::make('status'),
         ];
     }
 

@@ -29,7 +29,9 @@ class ProductRegistrationAdminDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-            ->addColumn('action', 'productregistration.action')
+            ->addColumn('status', 'dataTables.product-status')
+            ->addColumn('isCancel', 'dataTables.cancel-status')
+            ->rawColumns(['status', 'isCancel'])
             ->setRowId('id');
     }
 
@@ -67,6 +69,8 @@ class ProductRegistrationAdminDataTable extends DataTable
             Column::make('company_email'),
             Column::make('company_name'),
             Column::make('company_business_sector'),
+            Column::make('status'),
+            Column::make('isCancel')->title('Is Cancel'),
         ];
     }
 
