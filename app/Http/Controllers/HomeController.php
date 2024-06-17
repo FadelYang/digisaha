@@ -2,27 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Interfaces\UserInterface;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    private $userInterface;
+
+    public function __construct(UserInterface $userInterface)
     {
         $this->middleware('auth');
+        $this->userInterface = $userInterface;
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
-        return view('home');
+        $loggedUserInformation = $this->userInterface->getLoggedUserInfo();
+
+        return view('home')->with([
+            'userInfo' => $loggedUserInformation
+        ]);
     }
 }
