@@ -35,25 +35,25 @@ class CreateProductRegistrationRequest extends FormRequest
     }
 
     /**
- * Get the error messages for the defined validation rules.
- *
- * @return array<string, string>
- */
-public function messages(): array
-{
-    return [
-        'company_owner.max' => 'Pastikan menginput nama dengan benar (maximal 50 karakter)',
-        'company_owner.required' => 'Nama pemilik usaha wajib diisi',
-        'company_name.required' => 'Nama perusahaan wajib diisi',
-        'company_email.required' => 'Email perusahaan wajib diisi (gunakan email pemilik usaha jika tidak ada)',
-        'company_phone.required' => 'Nomor telepon perusahaan wajib diisi (gunakan nomor telepon pemilik usaha jika tidak ada)',
-        'company_phone.max' => 'Patikan memasukkan nomor telepon dengan format yang benar (08515xxxxxx)',
-        'company_address.required' => 'Alamat tempat usaha wajib diisi',
-        'company_address.min' => 'Pastikan yang diisi adalah alamat lengkap',
-        'company_business_sector.required' => 'Jenis usaha wajib diisi',
-        'company_business_sector_detail.required' => 'Detail jenis usaha wajib diisi',
-        'num_of_employees.required' => 'Jumlah karyawan wajib diisi',
-        'monthly_income.required' => 'Pendapatan bulanan perusahaan wajib diisi',
-    ];
-}
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array<string, string>
+     */
+    public function messages(): array
+    {
+        return [
+            'company_owner.max' => 'Pastikan menginput nama dengan benar (maximal 50 karakter)',
+            'company_owner.required' => 'Nama pemilik usaha wajib diisi',
+            'company_name.required' => 'Nama perusahaan wajib diisi',
+            'company_email.required' => 'Email perusahaan wajib diisi (gunakan email pemilik usaha jika tidak ada)',
+            'company_phone.required' => 'Nomor telepon perusahaan wajib diisi (gunakan nomor telepon pemilik usaha jika tidak ada)',
+            'company_phone.max' => 'Patikan memasukkan nomor telepon dengan format yang benar (08515xxxxxx)',
+            'company_address.required' => 'Alamat tempat usaha wajib diisi',
+            'company_address.min' => 'Pastikan yang diisi adalah alamat lengkap',
+            'company_business_sector.required' => 'Jenis usaha wajib diisi',
+            'company_business_sector_detail.required' => 'Detail jenis usaha wajib diisi',
+            'num_of_employees.required' => 'Jumlah karyawan wajib diisi',
+            'monthly_income.required' => 'Pendapatan bulanan perusahaan wajib diisi',
+        ];
+    }
 }

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->bigInteger('registrant_id');
             $table->string('company_owner');
+            $table->string('company_name');
             $table->string('company_email');
             $table->string('company_phone');
             $table->text('company_address');
