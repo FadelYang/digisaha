@@ -22,10 +22,12 @@ class ProductRegistration extends Model
         'num_of_employees',
         'monthly_income',
         'status',
+        'isCancel',
     ];
 
     protected $attributes = [
-        'status' => false
+        'status' => false,
+        'isCancel' => false
     ];
 
     protected static function booted()

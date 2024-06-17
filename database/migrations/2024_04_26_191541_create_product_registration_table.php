@@ -24,6 +24,7 @@ return new class extends Migration
             $table->integer('num_of_employees');
             $table->text('monthly_income');
             $table->boolean('status');
+            $table->boolean('isCancel');
 
             $table->foreign('registrant_id')->references('id')->on('users');
 
