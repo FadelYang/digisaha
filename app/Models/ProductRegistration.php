@@ -14,6 +14,7 @@ class ProductRegistration extends Model
     protected $fillable = [
         'registrant_id',
         'company_owner',
+        'company_name',
         'company_email',
         'company_phone',
         'company_address',
@@ -24,6 +25,8 @@ class ProductRegistration extends Model
         'status',
         'isCancel',
     ];
+
+    protected $table = 'product_registrations';
 
     protected $attributes = [
         'status' => false,

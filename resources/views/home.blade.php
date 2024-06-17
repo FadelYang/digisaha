@@ -82,5 +82,12 @@
                 </div>
             </div>
         </div>
+        <div class="card mt-5">
+            <div class="card-header">Product Registration</div>
+            <div class="card-body">
+                {{ $dataTable->table() }}
+                {{ $dataTable->scripts(attributes: ['type' => 'module']) }}
+            </div>
+        </div>
     </div>
 @endsection

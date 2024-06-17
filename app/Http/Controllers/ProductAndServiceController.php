@@ -28,6 +28,7 @@ class ProductAndServiceController extends Controller
 
     public function createRegistration(CreateProductRegistrationRequest $request)
     {
+        // dd($request->validated());
         $data = $request->validated();
 
         $result = $this->productAndServiceInterface->createRegistration($data);

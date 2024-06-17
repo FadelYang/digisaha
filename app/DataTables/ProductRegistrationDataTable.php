@@ -64,6 +64,9 @@ class ProductRegistrationDataTable extends DataTable
         return [
             Column::make('id'),
             Column::make('company_owner'),
+            Column::make('company_email'),
+            Column::make('company_name'),
+            Column::make('company_business_sector'),
         ];
     }
 

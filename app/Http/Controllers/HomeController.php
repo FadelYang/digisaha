@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DataTables\ProductRegistrationDataTable;
 use App\Interfaces\ProductAndServiceInterface;
 use App\Interfaces\UserInterface;
 use Illuminate\Http\Request;
@@ -18,18 +19,20 @@ class HomeController extends Controller
         $this->productAndServiceInterface = $productAndServiceInterface;
     }
 
-    public function index()
+    public function index(ProductRegistrationDataTable $dataTable)
     {
         $loggedUserInformation = $this->userInterface->getLoggedUserInfo();
         $allRegistrationData = $this->productAndServiceInterface->getAllRegistrationByLoggedUser();
         $finishRegistrationData = $this->productAndServiceInterface->getFinishRegistration($allRegistrationData);
         $pendingRegistrationData = $this->productAndServiceInterface->getPendingRegistration($allRegistrationData);
 
-        return view('home')->with([
+        $data  = [
             'userInfo' => $loggedUserInformation,
             'allRegistrationData' => $allRegistrationData,
             'finishRegistrationData' => $finishRegistrationData,
             'pendingRegistrationData' => $pendingRegistrationData,
-        ]);
+        ];
+
+        return $dataTable->render('home', $data);
     }
 }
