@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\DataTables\ProductRegistrationAdminDataTable;
 use App\DataTables\ProductRegistrationDataTable;
 use App\Interfaces\ProductAndServiceInterface;
 use App\Interfaces\UserInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -19,10 +21,18 @@ class HomeController extends Controller
         $this->productAndServiceInterface = $productAndServiceInterface;
     }
 
-    public function index(ProductRegistrationDataTable $dataTable)
+    public function index(ProductRegistrationDataTable $commonTable, ProductRegistrationAdminDataTable $adminDatatable)
     {
+        if (Auth::user()->is_admin == true) {
+            $allRegistrationData = $this->productAndServiceInterface->getAllRegistration();
+            $dataTable = $adminDatatable;
+        } else { 
+            $allRegistrationData = $this->productAndServiceInterface->getAllRegistrationByLoggedUser();
+            $dataTable = $commonTable;
+        }
+        
+
         $loggedUserInformation = $this->userInterface->getLoggedUserInfo();
-        $allRegistrationData = $this->productAndServiceInterface->getAllRegistrationByLoggedUser();
         $finishRegistrationData = $this->productAndServiceInterface->getFinishRegistration($allRegistrationData);
         $pendingRegistrationData = $this->productAndServiceInterface->getPendingRegistration($allRegistrationData);
 
